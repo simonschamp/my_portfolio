@@ -4,6 +4,7 @@ const menu = document.querySelector(".menu");
 const menuNav = document.querySelector(".menu-nav");
 const menuBranding = document.querySelector(".menu-branding");
 const navItems = document.querySelectorAll(".nav-item");
+
 //Set Initial state of Menu
 let showMenu = false;
 
@@ -25,6 +26,7 @@ function toggleMenu() {
     menuNav.classList.remove("show");
     menuBranding.classList.remove("show");
     navItems.forEach((item) => item.classList.remove("show"));
+
     //Set Menu State
     showMenu = false;
   }
