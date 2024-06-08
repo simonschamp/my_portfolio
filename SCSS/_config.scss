@@ -1,4 +1,4 @@
-$primary-color: #444;
+$primary-color: #444444;
 $secondary-color: #8fe464;
 $show-home-image: true;
 $home-image: url(../img/background2.jpg);
@@ -27,8 +27,16 @@ $background-opacity: 0.9;
     }
   }
 }
-//Mixins for Media query, different sizes
 
+// We want to set text colors
+@function setTextColor($color) {
+  @if (lightness($color) > 40) {
+    @return #000000;
+  } @else {
+    @return #ffffff;
+  }
+}
+//Mixins for Media query, different sizes
 //Media query  below 500px
 @mixin screenSm {
   @media screen and (max-width: 500px) {
