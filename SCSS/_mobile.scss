@@ -1,9 +1,15 @@
 //Big Screens
 @include screenXl {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 //Desktops/Laptos
 @include screenLg {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 //Tablets/small laptops
@@ -55,11 +61,17 @@
 
     grid-template-columns: 1fr;
   }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 //Smartphones
 @include screenSm {
   main#home h1 {
     margin-top: 10vh;
+  }
+  .projects {
+    grid-template-columns: repeat(1fr);
   }
 }

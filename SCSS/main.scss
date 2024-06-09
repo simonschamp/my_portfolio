@@ -68,9 +68,6 @@ main {
 }
 
 .about-info {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
@@ -104,8 +101,49 @@ main {
   .job {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
-    border-bottom: $secondary-color 5px solid;
+    //border-bottom: $secondary-color 5px solid;
+    border: $secondary-color 5px solid;
   }
+}
+
+// Stylling the  work page
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  img {
+    width: 100%;
+    border: 3px, $secondary-color, solid;
+  }
+  &:hover {
+    //opacity: 0.5;
+    border-color: $secondary-color;
+    @include easeOut;
+  }
+}
+
+//Creating sample Btn style
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary-color;
+    color: setTextcolor($secondary-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 20);
+  color: #fff;
+}
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 20);
+  color: #1c1717;
 }
 
 #main-footer {
