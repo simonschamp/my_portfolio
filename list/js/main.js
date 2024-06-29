@@ -1,11 +1,11 @@
-//Select Document Object Model(DOM) items
-const menuBtn = document.querySelector(".menu-btn");
-const menu = document.querySelector(".menu");
-const menuNav = document.querySelector(".menu-nav");
-const menuBranding = document.querySelector(".menu-branding");
-const navItems = document.querySelectorAll(".nav-item");
+//Get the Items (Initiating them)
+let menuBtn = document.querySelector(".menuButton");
+let menu = document.querySelector(".menu");
+let menuNav = document.querySelector(".menu-nav");
+let menuBranding = document.querySelector(".menu-Brand");
+let navItems = document.querySelectorAll(".nav-item");
 
-//Set Initial state of Menu
+//Initial state of the Menu
 let showMenu = false;
 
 menuBtn.addEventListener("click", toggleMenu);
@@ -18,7 +18,7 @@ function toggleMenu() {
     menuBranding.classList.add("show");
     navItems.forEach((item) => item.classList.add("show"));
 
-    // Set Menu State
+    // Menu State
     showMenu = true;
   } else {
     menuBtn.classList.remove("close");
@@ -27,7 +27,7 @@ function toggleMenu() {
     menuBranding.classList.remove("show");
     navItems.forEach((item) => item.classList.remove("show"));
 
-    //Set Menu State
+    // Alternate Menu State
     showMenu = false;
   }
 }
